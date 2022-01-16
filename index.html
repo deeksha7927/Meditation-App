@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Audio App</title>
+    <style>
+      .topnav {
+                    overflow: hidden;
+                    background: linear-gradient(to right,white, white);
+                
+                }
+                
+                .topnav a {
+                    float: left;
+                    color: black;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    transition: all 0.5s ease;
+                }
+                
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+                
+                .topnav a.active {
+                    background-color:white;
+                    color: rgb(15, 13, 13);
+                    font-family:cursive;
+                    margin-left: 50px;
+                }
+                
+                .topnav-right {
+                    float: right;
+                } 
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#name" style="font-size: 30px;"><b><strong>Mindfulness</strong></b></a>
+      
+      <div class="topnav-right">
+        <a href="home.html">Home</a>
+        <a href="Blog.html">Blog</a>
+        <a href="index.html">Meditate</a>
+        <a href="#home">Healthcare</a>
+        <a href="#home">About</a>
+      </div>
+  </div><hr><br/>
+    <div class="app">
+      <div class="vid-container">
+        <video loop >
+          <source src="./video/rain.mp4"  type="video/mp4">
+        </video>
+        </div>
+        <div class="time-select">
+          <button data-time="300" class="medium-mins">5 Minutes</button>
+          <button data-time="600" class="long-mins">10 Minutes</button>
+          <button data-time="1800">30 Minutes</button>
+        </div>
+        <div class="player-container">
+            <audio class="song">
+                <source src="./sounds/rain.mp3" />
+              </audio>
+              <img src="./svg/play.svg" class="play"></img>
+              <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                </svg>
+              <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                </svg>
+              
+              <img src="./svg/replay.svg" class="replay"></img>
+            
+                <h3 class="time-display">0:00</h3>      
+      </div>
+      <div class="sound-picker">
+        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4" ><img src="./svg/rain.svg" alt=""></button>
+        <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4"><img src="./svg/beach.svg" alt=""></button>
+        <button data-sound="./sounds/Birds.mp3" data-video="./video/forest.mp4"><img src="./svg/forest.svg" alt=""></button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
