@@ -9,7 +9,8 @@
   
   </div>
   This app have the advantage of providing intuitive tools, like trackers, that can help keep you accountable and improve over time and background video.
-
+  
+ <h3>Home page</h3>
 <div align="center">
  <img src="images/Home.JPG" />
   </div>
